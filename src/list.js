@@ -4,21 +4,22 @@ import Todo from './todo.js'
 class List extends React.Component{
   constructor(props){
     super(props);
-  },
+  }
   render(){
     var styles = {'backgroundColor': '#E3D324'}
-    return{
+    return(
       <div style={styles}>
+      // OJO!!!
         {this.props.todos.map((todo) =>
           <div key={todo.id}>
             {todo.render()}
           </div>
         )}
       </div>
-    }
+    )
   }
 }
 
-List.propTypes: {
+List.propTypes = {
   todos.propTypes: React.propTypes.array
-};
+}
